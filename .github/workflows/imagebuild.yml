@@ -38,5 +38,5 @@ jobs:
           podman pull docker.io/${{ secrets.DOCKER_USERNAME }}/mediplus-website:${{ github.run_number  }}
           podman stop mediplus-website || true
           podman rm mediplus-website || true
-          podman run -d --name mediplus-website -p 80:80 docker.io/${{ secrets.DOCKER_USERNAME }}/mediplus-website:${{ github.run_number  }}
+          podman run -d --name mediplus-website -p 8081:80 docker.io/${{ secrets.DOCKER_USERNAME }}/mediplus-website:${{ github.run_number  }}
 
